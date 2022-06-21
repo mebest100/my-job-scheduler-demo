@@ -52,7 +52,8 @@ public class JobServicesImpl implements JobServices {
                 .build();
         try {
             scheduler.scheduleJob(jobDetail, trigger);
-            scheduler.start(); // must have this line,otherwise task cannot start!
+            scheduler.start(); // must have this line,otherwise task won't start!
+            log.info("Job {} has been created successfully!", jobItem.getJobName());
         } catch (SchedulerException e) {
             log.error("error info is {}", e);
             return ResponseVO.Fail(ResponseEnum.CREATE_JOB_FAIL);
@@ -89,6 +90,7 @@ public class JobServicesImpl implements JobServices {
             scheduler.pauseTrigger(TriggerKey.triggerKey(jobName));
             scheduler.unscheduleJob(TriggerKey.triggerKey(jobName));
             scheduler.deleteJob(JobKey.jobKey(jobName));
+            log.info("Job {} has been deleted successfully!", jobName);
         } catch (SchedulerException e) {
             log.error("deleteJob {} failed:{}", jobName, e);
             return ResponseVO.Fail(ResponseEnum.DELETE_JOB_FAIL);
@@ -120,6 +122,7 @@ public class JobServicesImpl implements JobServices {
             }
             scheduler.rescheduleJob(triggerKey, trigger);
             scheduler.start();
+            log.info("Job {} has been updated successfully!", jobItem.getJobName());
         } catch (Exception e) {
             log.error("update job {} failed:{}", jobItem.getJobName(), e);
             return ResponseVO.Fail(ResponseEnum.UPDATE_JOB_FAIL,"job "+ jobItem.getJobName() + " update failed");
@@ -132,6 +135,7 @@ public class JobServicesImpl implements JobServices {
     public ResponseVO pauseJob(String jobName) {
         try {
             scheduler.pauseTrigger(TriggerKey.triggerKey(jobName));
+            log.info("Job {} has been paused successfully!", jobName);
 
         } catch (SchedulerException e) {
             log.error("Job {} pause failed:{}", jobName, e);
@@ -146,6 +150,7 @@ public class JobServicesImpl implements JobServices {
     public ResponseVO ResumeJob(String jobName) {
         try {
             scheduler.resumeTrigger(TriggerKey.triggerKey(jobName));
+            log.info("Job {} has been resumed successfully!", jobName);
 
         } catch (SchedulerException e) {
             log.error("Job {} resume failed:{}", jobName, e);
@@ -165,6 +170,7 @@ public class JobServicesImpl implements JobServices {
 
         try {
             scheduler.pauseAll();
+            log.info("All jobs has been paused successfully!");
         } catch (SchedulerException e) {
             log.error("PAUSE All Jobs failed:{}", e);
             return ResponseVO.Fail(ResponseEnum.PAUSE_ALLJOBS_FAIL);
@@ -182,6 +188,7 @@ public class JobServicesImpl implements JobServices {
 
         try {
             scheduler.resumeAll();
+            log.info("All jobs have been resumed successfully!");
         } catch (SchedulerException e) {
             log.error("RESUME All Jobs failed:{}", e);
             return ResponseVO.Fail(ResponseEnum.RESUME_ALLJOBS_FAIL);

@@ -26,7 +26,8 @@ import java.util.Map;
 public class DBUtils {
 
 
-    private String path = "F:\\tmp\\jsonData.json";
+    private String path = "/usr/local/mytest/jsonData.json";
+//    private String path = "F:\\tmp\\jsonData.json";
 
     static void WriteJson(String path, JSONObject jsonObject) {
         BufferedWriter bw;
@@ -76,7 +77,7 @@ public class DBUtils {
                 String fileContent = FileUtils.readFileToString(FilePath);
                 jsonObject = JSON.parseObject(fileContent, JSONObject.class);
                 if (jsonObject == null) {
-                    System.out.println("json File is Empty£°");
+                    System.out.println("json File is EmptyÔºÅ");
                     jsonObject = new JSONObject();
                     jsonObject.put(jobVO.getJobName(), jsonString);
                     WriteJson(path, jsonObject);

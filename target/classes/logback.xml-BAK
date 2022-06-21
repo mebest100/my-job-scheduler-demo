@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    //屏蔽quartz debug日志
+    <logger name="org.springframework.scheduling.quartz.LocalDataSourceJobStore" level="INFO"/>
+
+</configuration>
+

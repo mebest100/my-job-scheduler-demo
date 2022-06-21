@@ -27,13 +27,13 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
  
 - **Query a job by job name:**
 `http://hostip:8080/api/getjob/{jobName}`
-###### Rest Method
-> GET   <br />  
+  ###### Rest Method
+  > GET   <br />  
  
 - **Update a job(reschedule job by new interval and change job description):**  
    **Api Url**: `http://hostip:8080/api/updatejob`
-###### Rest Method
-> POST   <br />   
+  ###### Rest Method
+  > POST   <br />   
 ###### request body example as below(json): 
 ``` 
 {
@@ -47,25 +47,25 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
   
 - **Delete a job**
 `http://hostip:8080/api/deljob/{jobName}`
-###### Rest Method
-> GET   <br />  
+  ###### Rest Method
+  > GET   <br />  
 - **Pause a job**
 `http://hostip:8080/api/pausejob/{jobName}`
-###### Rest Method
-> GET   <br />  
+  ###### Rest Method
+  > GET   <br />  
 
 - **Resume a job**
 `http://hostip:8080/api/resumejob/{jobName}`
-###### Rest Method
-> GET   <br />  
+  ###### Rest Method
+  > GET   <br />  
 - **Pause all jobs**
 `http://hostip:8080/api/pauseall`
-###### Rest Method
-> GET   <br />  
+  ###### Rest Method
+  > GET   <br />  
 - **Resume all jobs**
 `http://hostip:8080/api/resumeall`
-###### Rest Method
-> GET   <br />  
+  ###### Rest Method
+  > GET   <br />  
 - **General Response Example**
 ```
 {

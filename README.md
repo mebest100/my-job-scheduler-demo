@@ -12,8 +12,8 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
 # API Guide:
 - **Create a job**: 
 `http://hostip:8080/api/addjob`
-###### Rest Method
-> POST   <br />   
+  ###### Rest Method
+  > POST   <br />   
 ###### request body example as below(json): 
 ``` 
 {

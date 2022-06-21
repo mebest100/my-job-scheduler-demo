@@ -10,7 +10,7 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
 * dockerized running available 
 
 # API Guide:
-- **Create a job**: 
+- **Create a job：** 
 `http://hostip:8080/api/addjob`
   ###### Rest Method
   > POST   <br />   
@@ -45,24 +45,24 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
   **interval**: 0  &nbsp; ==> one time job  
   **interval**: positive integer ==>  &nbsp;  repetitive job  
   
-- **Delete a job**
+- **Delete a job：**
 `http://hostip:8080/api/deljob/{jobName}`
   ###### Rest Method
   > GET   <br />  
-- **Pause a job**
+- **Pause a job：**
 `http://hostip:8080/api/pausejob/{jobName}`
   ###### Rest Method
   > GET   <br />  
 
-- **Resume a job**
+- **Resume a job：**
 `http://hostip:8080/api/resumejob/{jobName}`
   ###### Rest Method
   > GET   <br />  
-- **Pause all jobs**
+- **Pause all jobs：**
 `http://hostip:8080/api/pauseall`
   ###### Rest Method
   > GET   <br />  
-- **Resume all jobs**
+- **Resume all jobs：**
 `http://hostip:8080/api/resumeall`
   ###### Rest Method
   > GET   <br />  

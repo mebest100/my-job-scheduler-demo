@@ -18,7 +18,7 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
 ``` 
 {
     "jobName": "job1",
-    "jobDesc": "job1 task !",
+    "jobDesc": "job1 task created!",
     "interval": 5
 }
 ```
@@ -38,7 +38,7 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
 ``` 
 {
     "jobName": "job1",
-    "jobDesc": "job1 task !",
+    "jobDesc": "job1 task updated",
     "interval": 10
 }
 ```

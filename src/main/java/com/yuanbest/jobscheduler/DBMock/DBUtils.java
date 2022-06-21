@@ -43,7 +43,8 @@ public class DBUtils {
             bw.flush();
             bw.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Fail to write json to file {}",e);
+            ResponseVO.Fail(ResponseEnum.SERVER_ERROR);
         }
 
     }
@@ -89,7 +90,8 @@ public class DBUtils {
                 jsonObject.put(jobVO.getJobName(), jsonString);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+           log.error("Fail to write json to file {}",e);
+            ResponseVO.Fail(ResponseEnum.SERVER_ERROR);
         }
 
         WriteJson(path, jsonObject);

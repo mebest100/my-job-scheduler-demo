@@ -1,4 +1,4 @@
-# job-scheduler design  demo
+# Job-Scheduler Design Demo
 This is a job scheduler implemented by springboot,quartz and json MockDB.
 # Involved Tech and Application Features
 * springboot for rest api,quartz for job scheduler, json operation for Mock DB

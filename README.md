@@ -22,8 +22,8 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
     "interval": 5
 }
 ```
-    **interval**: 0  &nbsp;==> one time job  
-    **interval**: positive integer ==>  &nbsp;  repetitive job,
+   **interval**: 0  &nbsp;==> one time job  
+   **interval**: positive integer ==>  &nbsp;  repetitive job,
  
 - **Query a job by job name:**
 `http://hostip:8080/api/getjob/{jobName}`
@@ -42,8 +42,8 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
     "interval": 10
 }
 ```
-    **interval**: 0  &nbsp; ==> one time job  
-    **interval**: positive integer ==>  &nbsp;  repetitive job  
+   **interval**: 0  &nbsp; ==> one time job  
+   **interval**: positive integer ==>  &nbsp;  repetitive job  
   
 - **Delete a job：**
 `http://hostip:8080/api/deljob/{jobName}`

@@ -34,7 +34,7 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
    **Api Url**: `http://hostip:8080/api/updatejob`
   ###### Rest Method
   > POST   <br />   
-###### request body example as below(json): 
+  ###### request body example as below(json): 
 ``` 
 {
     "jobName": "job1",
@@ -42,8 +42,8 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
     "interval": 10
 }
 ```
-   **interval**: 0  &nbsp; ==> one time job  
-   **interval**: positive integer ==>  &nbsp;  repetitive job  
+   &emsp;**interval**: 0  &nbsp; ==> one time job  
+   &emsp;**interval**: positive integer ==>  &nbsp;  repetitive job  
   
 - **Delete a job：**
 `http://hostip:8080/api/deljob/{jobName}`

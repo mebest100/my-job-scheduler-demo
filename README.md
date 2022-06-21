@@ -10,7 +10,7 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
 * dockerized running available 
 
 # API Guide:
-- **create a job**: 
+- **Create a job**: 
 `http://hostip:8080/api/addjob`
 ###### Rest Method
 > POST   <br />   
@@ -25,12 +25,12 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
   **interval**: 0  &nbsp; one time job  
   **interval**: positive integer  &nbsp;  repetitive job,
  
-- **query a job by job name:**
+- **Query a job by job name:**
 `http://hostip:8080/api/getjob/{jobName}`
 ###### Rest Method
 > GET   <br />  
  
-- **update a job(reschedule job by new interval and change job description):**  
+- **Update a job(reschedule job by new interval and change job description):**  
    **Api Url**: `http://hostip:8080/api/updatejob`
 ###### Rest Method
 > POST   <br />   
@@ -45,24 +45,24 @@ This is a job scheduler implemented by springboot,quartz and json MockDB.
   **interval**: 0  &nbsp; one time job  
   **interval**: positive integer  &nbsp;  repetitive job  
   
-- **delete a job**
+- **Delete a job**
 `http://hostip:8080/api/deljob/{jobName}`
 ###### Rest Method
 > GET   <br />  
-- **pause a job**
+- **Pause a job**
 `http://hostip:8080/api/pausejob/{jobName}`
 ###### Rest Method
 > GET   <br />  
 
-- **resume a job**
+- **Resume a job**
 `http://hostip:8080/api/resumejob/{jobName}`
 ###### Rest Method
 > GET   <br />  
-- **pause all jobs**
+- **Pause all jobs**
 `http://hostip:8080/api/pauseall`
 ###### Rest Method
 > GET   <br />  
-- **resume all jobs**
+- **Resume all jobs**
 `http://hostip:8080/api/resumeall`
 ###### Rest Method
 > GET   <br />  
